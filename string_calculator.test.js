@@ -24,3 +24,22 @@ test('should return one when "1" is passed', () => {
   test('Should return 10 when "//;\n1;2;3;4',()=>{
     expect(string_calculator("//;\n1;2;3;4")).toBe(10)
   })
+  test("should return -1 when '-1'", async () => {
+    try {
+      await string_calculator("-1");
+    } catch (error) {
+      expect(error).toMatch('Negative numbers not allowed -1');
+    }
+  });
+  test("should return -1,-3 when '-1,2,-3'", async () => {
+    try {
+      await string_calculator("-1,2,-3");
+    } catch (error) {
+      expect(error).toMatch('Negative numbers not allowed -1,-3');
+    }
+  });
+//   test("should return -1 when '-1'", function () {
+//     expect(function() {
+//         string_calculator('-1');
+//     }).toThrow('Negative numbers not allowed -1')
+// })
