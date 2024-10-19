@@ -1,0 +1,22 @@
+{
+  "name": "string_calculator_tdd",
+  "version": "1.0.0",
+  "description": "string calculator",
+  "main": "string_add.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunitabhoomi/string_calculator_tdd.git"
+  },
+  "author": "sunita dengi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sunitabhoomi/string_calculator_tdd/issues"
+  },
+  "homepage": "https://github.com/sunitabhoomi/string_calculator_tdd#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
