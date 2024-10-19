@@ -6,3 +6,6 @@ test("should return zero when '' is passed", () => {
 test('should return one when "1" is passed', () => {
     expect(string_calculator("1")).toBe(1);
   });
+  test('should return three when "1,2" is passed', () => {
+    expect(string_calculator("1,2")).toBe(3);
+  });
