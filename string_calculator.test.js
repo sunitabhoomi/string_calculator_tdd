@@ -12,3 +12,9 @@ test('should return one when "1" is passed', () => {
   test('should return six when "1,2,3" is passed', () => {
     expect(string_calculator("1,2,3")).toBe(6);
   });
+  test('Should return six when "1\n2,3',()=>{
+    expect(string_calculator("1\n2,3")).toBe(6)
+  })
+  test('Should return 10 when "1\n2,3\n4',()=>{
+    expect(string_calculator("1\n2,3\n4")).toBe(10)
+  })
