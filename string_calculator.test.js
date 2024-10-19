@@ -18,3 +18,9 @@ test('should return one when "1" is passed', () => {
   test('Should return 10 when "1\n2,3\n4',()=>{
     expect(string_calculator("1\n2,3\n4")).toBe(10)
   })
+  test('Should return 3 when "//;\n1;2',()=>{
+    expect(string_calculator("//;\n1;2")).toBe(3)
+  })
+  test('Should return 10 when "//;\n1;2;3;4',()=>{
+    expect(string_calculator("//;\n1;2;3;4")).toBe(10)
+  })

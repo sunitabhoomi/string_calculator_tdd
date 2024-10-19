@@ -7,9 +7,21 @@ function add( string_number){
    else if (string_number.length === 1) {
      return parseInt(string_number);
    }
-   else {
-    //parameter value is "1,2"
-    string_number = string_number.replace(/(\r\n|\n|\r)/gm, ',');
+   else{
+    //input value with delimiter
+    if(string_number.indexOf('//') === 0){
+        let delimiters = '\n|,|;';
+        if (string_number.indexOf('//') === 0) {
+            delimiters += string_number.substring(2, string_number.indexOf('\n'));
+            string_number = string_number.substring(string_number.indexOf('\n')).replace(/(;)/gm,',');
+            console.log(string_number)
+          }
+    }
+    //input value with new line
+    else {
+        string_number = string_number.replace(/(\r\n|\n|\r)/gm, ',');
+
+    }
     let result = string_number.split(',');
     let total = 0;
     for(let i = 0 ; i < result.length ; i++){
